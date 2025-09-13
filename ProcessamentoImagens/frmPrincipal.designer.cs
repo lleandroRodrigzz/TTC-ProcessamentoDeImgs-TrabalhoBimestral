@@ -33,11 +33,8 @@
             this.btnAbrirImagem = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.btnLuminanciaSemDMA = new System.Windows.Forms.Button();
-            this.btnLuminanciaComDMA = new System.Windows.Forms.Button();
-            this.btnNegativoComDMA = new System.Windows.Forms.Button();
-            this.btnNegativoSemDMA = new System.Windows.Forms.Button();
             this.btnAfinamentoComDMA = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictBoxImg1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictBoxImg2)).BeginInit();
             this.SuspendLayout();
@@ -67,7 +64,7 @@
             this.btnAbrirImagem.Location = new System.Drawing.Point(13, 630);
             this.btnAbrirImagem.Margin = new System.Windows.Forms.Padding(4);
             this.btnAbrirImagem.Name = "btnAbrirImagem";
-            this.btnAbrirImagem.Size = new System.Drawing.Size(135, 28);
+            this.btnAbrirImagem.Size = new System.Drawing.Size(135, 41);
             this.btnAbrirImagem.TabIndex = 106;
             this.btnAbrirImagem.Text = "Abrir Imagem";
             this.btnAbrirImagem.UseVisualStyleBackColor = true;
@@ -75,79 +72,42 @@
             // 
             // btnLimpar
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(13, 666);
+            this.btnLimpar.Location = new System.Drawing.Point(13, 677);
             this.btnLimpar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(135, 28);
+            this.btnLimpar.Size = new System.Drawing.Size(135, 42);
             this.btnLimpar.TabIndex = 107;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
-            // btnLuminanciaSemDMA
-            // 
-            this.btnLuminanciaSemDMA.Location = new System.Drawing.Point(292, 630);
-            this.btnLuminanciaSemDMA.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLuminanciaSemDMA.Name = "btnLuminanciaSemDMA";
-            this.btnLuminanciaSemDMA.Size = new System.Drawing.Size(277, 28);
-            this.btnLuminanciaSemDMA.TabIndex = 108;
-            this.btnLuminanciaSemDMA.Text = "Luminância sem DMA";
-            this.btnLuminanciaSemDMA.UseVisualStyleBackColor = true;
-            this.btnLuminanciaSemDMA.Click += new System.EventHandler(this.btnLuminanciaSemDMA_Click);
-            // 
-            // btnLuminanciaComDMA
-            // 
-            this.btnLuminanciaComDMA.Location = new System.Drawing.Point(292, 666);
-            this.btnLuminanciaComDMA.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLuminanciaComDMA.Name = "btnLuminanciaComDMA";
-            this.btnLuminanciaComDMA.Size = new System.Drawing.Size(277, 28);
-            this.btnLuminanciaComDMA.TabIndex = 109;
-            this.btnLuminanciaComDMA.Text = "Luminância com DMA";
-            this.btnLuminanciaComDMA.UseVisualStyleBackColor = true;
-            this.btnLuminanciaComDMA.Click += new System.EventHandler(this.btnLuminanciaComDMA_Click);
-            // 
-            // btnNegativoComDMA
-            // 
-            this.btnNegativoComDMA.Location = new System.Drawing.Point(577, 666);
-            this.btnNegativoComDMA.Margin = new System.Windows.Forms.Padding(4);
-            this.btnNegativoComDMA.Name = "btnNegativoComDMA";
-            this.btnNegativoComDMA.Size = new System.Drawing.Size(277, 28);
-            this.btnNegativoComDMA.TabIndex = 111;
-            this.btnNegativoComDMA.Text = "Negativo com DMA";
-            this.btnNegativoComDMA.UseVisualStyleBackColor = true;
-            this.btnNegativoComDMA.Click += new System.EventHandler(this.btnNegativoComDMA_Click);
-            // 
-            // btnNegativoSemDMA
-            // 
-            this.btnNegativoSemDMA.Location = new System.Drawing.Point(577, 630);
-            this.btnNegativoSemDMA.Margin = new System.Windows.Forms.Padding(4);
-            this.btnNegativoSemDMA.Name = "btnNegativoSemDMA";
-            this.btnNegativoSemDMA.Size = new System.Drawing.Size(277, 28);
-            this.btnNegativoSemDMA.TabIndex = 110;
-            this.btnNegativoSemDMA.Text = "Negativo sem DMA";
-            this.btnNegativoSemDMA.UseVisualStyleBackColor = true;
-            this.btnNegativoSemDMA.Click += new System.EventHandler(this.btnNegativoSemDMA_Click);
-            // 
             // btnAfinamentoComDMA
             // 
-            this.btnAfinamentoComDMA.Location = new System.Drawing.Point(861, 630);
+            this.btnAfinamentoComDMA.Location = new System.Drawing.Point(643, 630);
             this.btnAfinamentoComDMA.Name = "btnAfinamentoComDMA";
-            this.btnAfinamentoComDMA.Size = new System.Drawing.Size(277, 28);
+            this.btnAfinamentoComDMA.Size = new System.Drawing.Size(277, 41);
             this.btnAfinamentoComDMA.TabIndex = 112;
             this.btnAfinamentoComDMA.Text = "Afinamento de Zhang Suen com DMA";
             this.btnAfinamentoComDMA.UseVisualStyleBackColor = true;
             this.btnAfinamentoComDMA.Click += new System.EventHandler(this.btnAfinamentoComDMA_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(643, 677);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(277, 42);
+            this.button1.TabIndex = 113;
+            this.button1.Text = "Extração de Contornos";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnExtracaoContornosComDMA_Click);
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1627, 748);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAfinamentoComDMA);
-            this.Controls.Add(this.btnNegativoComDMA);
-            this.Controls.Add(this.btnNegativoSemDMA);
-            this.Controls.Add(this.btnLuminanciaComDMA);
-            this.Controls.Add(this.btnLuminanciaSemDMA);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnAbrirImagem);
             this.Controls.Add(this.pictBoxImg2);
@@ -170,11 +130,8 @@
         private System.Windows.Forms.Button btnAbrirImagem;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
-        private System.Windows.Forms.Button btnLuminanciaSemDMA;
-        private System.Windows.Forms.Button btnLuminanciaComDMA;
-        private System.Windows.Forms.Button btnNegativoComDMA;
-        private System.Windows.Forms.Button btnNegativoSemDMA;
         private System.Windows.Forms.Button btnAfinamentoComDMA;
+        private System.Windows.Forms.Button button1;
     }
 }
 

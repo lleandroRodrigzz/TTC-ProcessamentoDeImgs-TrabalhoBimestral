@@ -13,6 +13,7 @@ namespace ProcessamentoImagens
     {
         private Image image;
         private Bitmap imageBitmap;
+        private Bitmap processedImage;
 
         public frmPrincipal()
         {
@@ -37,38 +38,6 @@ namespace ProcessamentoImagens
             pictBoxImg2.Image = null;
         }
 
-        private void btnLuminanciaSemDMA_Click(object sender, EventArgs e)
-        {
-            Bitmap imgDest = new Bitmap(image);
-            imageBitmap = (Bitmap)image;
-            Filtros.convert_to_gray(imageBitmap, imgDest);
-            pictBoxImg2.Image = imgDest;
-        }
-
-        private void btnLuminanciaComDMA_Click(object sender, EventArgs e)
-        {
-            Bitmap imgDest = new Bitmap(image);
-            imageBitmap = (Bitmap)image;
-            Filtros.convert_to_grayDMA(imageBitmap, imgDest);
-            pictBoxImg2.Image = imgDest;
-        }
-
-        private void btnNegativoSemDMA_Click(object sender, EventArgs e)
-        {
-            Bitmap imgDest = new Bitmap(image);
-            imageBitmap = (Bitmap)image;
-            Filtros.negativo(imageBitmap, imgDest);
-            pictBoxImg2.Image = imgDest;
-        }
-
-        private void btnNegativoComDMA_Click(object sender, EventArgs e)
-        {
-            Bitmap imgDest = new Bitmap(image);
-            imageBitmap = (Bitmap)image;
-            Filtros.negativoDMA(imageBitmap, imgDest);
-            pictBoxImg2.Image = imgDest;
-        }
-
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
 
@@ -76,10 +45,32 @@ namespace ProcessamentoImagens
 
         private void btnAfinamentoComDMA_Click(object sender, EventArgs e)
         {
-            Bitmap imgDest = new Bitmap(image);
-            imageBitmap = (Bitmap)image;
-            Filtros.afinamentoDMA(imageBitmap, imgDest);
-            pictBoxImg2.Image = imgDest;
+            if(image == null)
+            {
+                MessageBox.Show("Abra uma imagem primeiro.");
+            }
+            else {
+                Bitmap imgDest = new Bitmap(image);
+                imageBitmap = (Bitmap)image;
+                Filtros.afinamentoDMA(imageBitmap, imgDest);
+                pictBoxImg2.Image = imgDest;
+                this.processedImage = imgDest;
+            }
+        }
+
+        private void btnExtracaoContornosComDMA_Click(object sender, EventArgs e)
+        {
+            if(this.processedImage == null)
+            {
+                MessageBox.Show("Realize o afinamento primeiro.");
+            }
+            else
+            {
+                Bitmap imgDest = new Bitmap(image);
+                imageBitmap = (Bitmap)this.processedImage;
+                Filtros.extracaoDMA(imageBitmap, imgDest);
+                pictBoxImg2.Image = imgDest;
+            }
         }
     }
 }
